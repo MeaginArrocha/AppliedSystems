@@ -1,0 +1,43 @@
+Meagin Arrocha
+Homework 1
+
+1)
+a. B186
+b. 9DF
+c. A9C
+d. 1C35
+
+2)
+a. 0010 1011
+b. 1101 0101
+c. 1001 1101
+d. 1111 1111
+e. 0100 1001
+
+3)
+a. 14
+b. 299
+c. 42
+d. 98
+e. 239
+
+4)
+a. EB
+b. 9EF
+c. B
+d. 274A9
+e. F8A
+
+5)
+overflow = when a result is too large or too small,
+in bits, for the range allotted.
+
+underflow = only with floating point numbers; occurs
+when there isn't a sufficient number of bits to represent
+the number exactly and you have to round off.
+
+6)
+a. 153
+b. 2315
+c. 47
+d. 2501

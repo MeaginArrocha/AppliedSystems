@@ -1,0 +1,96 @@
+variables are global ; everyone can see and use them
+
+mul - multiply usually takes 12 bits to multiply
+
+immediates are always 16  bits (like a legit #)
+
+300,000 would not fits in 16 bits
+
+overflow  = When its too large or too small for the range
+
+mult - gets a 64bit answer so it splits it up into 2 32bits
+	and puts it in registers hi and lo
+	(remainder ends up in hi and quotient in lo)
+
+mthi - moves from destination register to hi register
+	(really a copy and not moving it)
+
+can't really do anything with hi and lo except to move
+things in and out of it
+	(i.e. mthi, mtlo, mflo, mfhi)
+
+& in assembly is not the same as && that we've
+ used before for booleans
+	(this one goes through one bit at a time instead
+		of treating things as booleans)
+
+neg = negates something (mul by -1)
+
+
+_eq =  equal to (on equal)
+_gt = greater than
+_ge = greater than or equal to
+_lt = less than
+_le = less than or equal to
+_ne = not equal
+
+
+use branch instead on ones under compare (which means set)
+
+where to go =  a "label"
+
+more efficient way to do if is to only branch if you need
+to. don't branch if you have t==4 and the user imputted
+anything but 4.
+
+check if t is not equal (bne) to 4 first instead of if
+	t == 4
+
+never have a branch to the next line of code
+	(was going to go there way)
+
+have to make sure the labels you've used are defined.
+
+bne	$t1, 4, else 
+	means you branch to else because t \= 4
+
+beq	$t1, 4, then
+	means you branch to then because t == 4
+
+use which one you think is going to be true most of the
+time so it will run faster
+
+for 'and' you would want to do the false first because
+it has more chances of failing
+
+for 'or' you would want to do the true first because
+it has more of a chance of succeeding
+
+you have "afterif" after both for 'and' because you want
+to skip the 'then' part if either one is false
+
+you have "then" for the first condition for 'or' because
+you want to go to branch if it is true
+
+make sure you have different labels for different if statements
+
+if statements with no else; branch to the false
+
+___z : is the source is zero
+	special because registers start at zero
+
+
+
+QUESTIONS:
+WHAT IS AFTER IF ; JUST A LABEL TO SAY GO DO THE STUFF
+AFTER THE IF STATEMENT?
+
+
+CAN YOU DO ELSE IFS IN ASSEMBLY? HOW? MAKE LABEL ELSEIF?
+
+FOR     beq	$t1, $t2, Then
+	bge	$t3, $t4, AfterIf
+
+	WHAT DOES IT DO IF THE SECOND PART IS TRUE WHEN
+	IT SAYS AFTER IF?
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+clear
+echo "Enter first integer"
+read fint
+echo "Enter second integer"
+read sint
+echo "$fint + $sint = `expr $fint + $sint`"
+echo "$fint - $sint = `expr $fint - $sint`"
+echo "$fint * $sint = `expr $fint \* $sint`"
+echo "$fint / $sint = `expr $fint / $sint`"
+echo "You have "'$'"$fint.$sint to spend"

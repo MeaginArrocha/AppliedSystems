@@ -1,0 +1,27 @@
+#!/bin/bash
+#Script to print multiplication table from the int in range
+#
+
+echo "Enter value from 3 to 7: "
+read n
+#get user to enter the correct int
+while [ $n -lt 3 -o $n -gt 7 ]
+do
+	echo "Enter value from 3 to 7: "
+	read n
+done
+
+#once its done, n has a value in range 3 to 7
+
+#multiplication table
+index=1
+while (( index <= n ))
+do
+	echo -n "$index: "
+
+	echo `for (( c=1; c<=n; c++ )) do
+		expr $index \* $c
+	done`
+
+	((index +=1))
+done
